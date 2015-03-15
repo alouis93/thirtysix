@@ -1,0 +1,17 @@
+<ion-view view-title="Settings">
+  <ion-content>
+  	<div class="list">
+<!-- 	  <div class="item item-divider">
+	    Color Schemes
+	  </div> -->
+	  <!-- ng-repeat creates its own scope! -->
+	  <label ng-repeat="theme in themes" class="item item-radio">
+	    <input type="radio" ng-model='selectedTheme.theme' ng-click='themeSelect()' value='{{theme}}' name="group">
+	    <div class="item-content">
+	      {{theme}} Theme
+	    </div>
+	    <i class="radio-icon ion-checkmark"></i>
+	  </label>
+	</div>
+  </ion-content>
+</ion-view>

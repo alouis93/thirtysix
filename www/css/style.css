@@ -1,0 +1,171 @@
+/* Empty. Add your own CSS if you like */
+@font-face
+{
+	font-family: Helvetica;
+	src: url(../fonts/Helvetica.ttf);
+}
+
+
+
+*{
+	font-family: Helvetica;
+
+}
+
+.Dark ion-content{
+	background: black;
+	color: white;
+}
+
+.Dark ._title{
+	color: white;
+}
+.Dark .bar-footer{
+	background: black;
+}
+.Dark ion-header-bar{
+	background-image: none;
+	border-bottom: 0px;
+	background: #444 !important;
+}
+
+.Dark ion-header-bar .title{
+	color: white !important;
+}
+
+.Dark .list .item{
+	background-image: none;
+	border-color: rgb(113, 58, 69);
+	background: rgb(113, 58, 69);
+	border: none;
+	color: white !important;
+}
+
+.Light .list .item{
+	background-image: none;
+	border: none;
+	padding-bottom: 1px;
+}
+
+.Dark .item-radio input:checked ~ .item-content{
+	background: rgb(39, 23, 23);
+}
+
+
+.Light .menu-left .list .item{
+  border: 0;
+  padding-bottom: 1px;
+  background: #ddd;
+}
+
+
+.Dark .menu-left .list .item{
+  border: 0;
+  padding-bottom: 1px;
+background: rgb(113, 58, 69);
+}
+
+.Dark .list .item .item-content{
+	background: black;
+}
+
+.Dark .menu-left .scroll-content{
+	border-right: 1px solid rgb(113, 58, 69) !important;
+}
+
+.Dark .menu-left .scroll-content .item{
+	border-bottom: 0 !important;
+}
+
+.Light ion-content{
+	background: white;
+	color: black;
+}
+.Light .bar-footer{
+	/*background: yellow;*/
+}
+
+._title{
+	font-weight:bold;
+	font-size:21vh;
+	letter-spacing:-6px;
+	line-height:20vh;
+	padding-top:7vh;
+	padding-left:7vh;
+	padding-right:7vh;
+
+/*	color: white;
+*/}
+
+.default-text{
+	font-size:3vh;
+	line-height:4vh;
+	padding-top: 20px;
+	padding-right:20px;
+	padding-left: 20px;
+}
+
+.crim{
+	color:crimson;
+}
+
+.button-text{
+	padding-top:3px;
+	letter-spacing:2px;
+	font-weight:bold;
+}
+
+.question-text{
+	font-weight:bold;
+	letter-spacing:-2px;
+	font-size:8vh;
+	line-height:8vh;
+}
+
+.side-icon{
+	color: crimson;
+
+}
+
+
+.bar-footer{
+	height:17vh;
+	text-align: center;
+}
+
+.header-item .ion-android-home{
+	font-size:0vh;
+}
+
+.bar-header{ 
+}
+
+.center-svg{
+	display:block;
+	width:100%;
+	height:100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.center-svg path{
+	fill: crimson;
+}
+
+.bar{
+
+}
+
+.bar-footer{
+	background-image: none !important;
+}
+
+.bar-assertive{
+	background-color: crimson !important;
+}
+
+
+.bar .button{
+		color: crimson !important;
+
+}
