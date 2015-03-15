@@ -70,66 +70,45 @@ var questions = [ {'q': "Given the choice of anyone in the world, whom would you
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
-  .state('app', {
-    url: "/app",
-    abstract: true,
-    templateUrl: "templates/menu.html",
-    controller: 'AppCtrl'
-  })
-
-  .state('app.search', {
-    url: "/search",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/search.html"
-      }
-    }
-  })
-
-  // .state('app.browse', {
-  //   url: "/browse",
-  //   controller: 'QCtrl',
-  //   views: {
-  //     'menuContent': {
-  //       templateUrl: "templates/browse.html"
-  //     }
-  //   }
-  // })
-
-.state('app.browse', {
-    url: "/browse/:question",
-    resolve: {
-      question: function($stateParams, qService){
-        // console.log("WINDOW.BAR");
-        // window.bar = $stateParams;
-        // Default state
-        if ($stateParams.question.length == 0){
-          $stateParams.question = "0"; 
-        }
-        console.log(qService.getQuestion($stateParams.question));
-        return qService.getQuestion($stateParams.question);
-      },
-      questions_len: function(qService){
-        return qService.questions.length;
-      }
-    },
-    views: {
-      'menuContent': {
-        templateUrl: "templates/browse.html",
-        controller: 'QCtrl',
-      }
-    }
-  })
-    .state('app.playlists', {
-      url: "/playlists",
+    .state('app', {
+      url: "/app",
+      abstract: true,
+      templateUrl: "templates/main.html",
+      controller: 'AppCtrl'
+    })
+    .state('app.landing', {
+      url: "/landing",
       views: {
         'menuContent': {
-          templateUrl: "templates/playlists.html",
+          templateUrl: "templates/landing.html",
           controller: 'AppCtrl'
         }
       }
     })
+    .state('app.question', {
+        url: "/question/:question",
+        resolve: {
+          question: function($stateParams, qService){
+            // console.log("WINDOW.BAR");
+            // window.bar = $stateParams;
+            // Default state
+            if ($stateParams.question.length == 0){
+              $stateParams.question = "0"; 
+            }
+            console.log(qService.getQuestion($stateParams.question));
+            return qService.getQuestion($stateParams.question);
+          },
+          questions_len: function(qService){
+            return qService.questions.length;
+          }
+        },
+        views: {
+          'menuContent': {
+            templateUrl: "templates/question.html",
+            controller: 'QCtrl',
+          }
+        }
+      })
     .state('app.settings', {
       url: "/settings",
       views: {
@@ -146,16 +125,7 @@ var questions = [ {'q': "Given the choice of anyone in the world, whom would you
           templateUrl: "templates/about.html",
         }
       }
-    })    
-  .state('app.single', {
-    url: "/playlists/:playlistId",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/playlist.html",
-        controller: 'PlaylistCtrl'
-      }
-    }
-  });
+    });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/landing');
 });
