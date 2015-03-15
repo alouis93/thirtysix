@@ -39,20 +39,21 @@ angular.module('starter.controllers', ['ionic'])
     });
 
   $scope.question = question;
-
-
-
   $scope.$on( "$ionicView.enter", function( scopes, states ) {
-
       if ($scope.idx == 36){
             [].slice.call( document.querySelectorAll( '.progress-button' ) ).forEach( function( bttn, pos ) {
                 new UIProgressButton( bttn, {
                     callback : function( instance ) {
                         var progress = 0,
                             interval = setInterval( function() {
-                                progress = Math.min( progress + Math.random() * 0.1, 1 );
-                                instance.setProgress( progress );
-                                if( progress === 1 ) {
+                                // progress = Math.min( progress + Math.random() * 0.1, 1 );
+                                progress = Math.min(progress + 150, 240000);
+                                console.log(progress);
+
+                                var setVal = (progress/240000);
+
+                                instance.setProgress( setVal );
+                                if( progress === 240000 ) {
                                     instance.stop( pos === 1 || pos === 3 ? -1 : 1 );
                                     clearInterval( interval );
                                 }
