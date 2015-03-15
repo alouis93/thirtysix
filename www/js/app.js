@@ -88,10 +88,10 @@ var questions = [ {'q': "Given the choice of anyone in the world, whom would you
     .state('app.question', {
         url: "/question/:question",
         resolve: {
+          idx : function($stateParams){
+            return $stateParams.question;
+          },
           question: function($stateParams, qService){
-            // console.log("WINDOW.BAR");
-            // window.bar = $stateParams;
-            // Default state
             if ($stateParams.question.length == 0){
               $stateParams.question = "0"; 
             }

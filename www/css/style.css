@@ -5,11 +5,17 @@
 	src: url(../fonts/Helvetica.ttf);
 }
 
-
-
 *{
 	font-family: Helvetica;
 
+}
+
+
+
+
+
+#count36{
+	margin-top:12vh;
 }
 
 .Dark ion-content{
@@ -62,15 +68,19 @@
 .Dark .menu-left .list .item{
   border: 0;
   padding-bottom: 1px;
-background: rgb(113, 58, 69);
+  background: rgb(56, 31, 36);
 }
 
 .Dark .list .item .item-content{
 	background: black;
 }
 
+.Dark .list .item .item-content.activated{
+	background: rgb(39, 23, 23);
+}
+
 .Dark .menu-left .scroll-content{
-	border-right: 1px solid rgb(113, 58, 69) !important;
+	border-right: 1px solid rgb(44, 19, 24) !important;
 }
 
 .Dark .menu-left .scroll-content .item{
@@ -96,6 +106,10 @@ background: rgb(113, 58, 69);
 
 /*	color: white;
 */}
+
+.row-center-f{
+	margin-top:1vh;
+}
 
 .default-text{
 	font-size:3vh;
