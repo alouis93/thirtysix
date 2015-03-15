@@ -17,6 +17,8 @@ angular.module('starter.controllers', ['ionic'])
       }
       else{
         localStorage.setItem("_36theme",newtheme);
+        console.log(oldtheme);
+        console.log(newtheme)
         $("body").removeClass(oldtheme).addClass(newtheme);      
         // console.log(localStorage.getItem("_36theme"));        
       }
