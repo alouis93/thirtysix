@@ -1,7 +1,10 @@
 angular.module('starter.controllers', ['ionic'])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
-  
+
+
+
+
   // Theme control
   $scope.themes = ['Light', 'Dark'];
   // Check for valid theme? 
@@ -21,11 +24,27 @@ angular.module('starter.controllers', ['ionic'])
   $scope._landingTitle = " ";
   // Form data for the login modal
 })
-.controller('QCtrl', function($scope, $stateParams, $state, question, questions_len){
+.controller('QCtrl', function($scope, $stateParams, $state, idx, question, questions_len){
+  $scope.idx = idx;
+    // Setting small-text
+    $scope.$watch('idx', function(){
+        var smallText = ["5", "12", "14", "18", "21", "22", "26", "27", "32", "33", "35"];
+        console.log(idx);
+        if (smallText.indexOf(idx) == -1){
+          $scope.smallText = false;
+        }
+        else{
+          $scope.smallText = true;
+        }      
+    });
+
   $scope.question = question;
-  $scope.len = parseFloat($stateParams.question);
+
+
+
   $scope.$on( "$ionicView.enter", function( scopes, states ) {
-      if ($scope.len == 36){
+
+      if ($scope.idx == 36){
             [].slice.call( document.querySelectorAll( '.progress-button' ) ).forEach( function( bttn, pos ) {
                 new UIProgressButton( bttn, {
                     callback : function( instance ) {

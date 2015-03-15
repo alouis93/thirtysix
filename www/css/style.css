@@ -13,7 +13,6 @@
 
 
 
-
 #count36{
 	margin-top:12vh;
 }
@@ -134,6 +133,11 @@
 	letter-spacing:-2px;
 	font-size:8vh;
 	line-height:8vh;
+}
+
+.smallText{
+	font-size:6vh !important;
+	line-height: 6vh !important;	
 }
 
 .side-icon{
