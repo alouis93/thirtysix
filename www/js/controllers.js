@@ -36,7 +36,15 @@ angular.module('starter.controllers', ['ionic'])
           $scope.smallText = false;
         }
         else{
-          $scope.smallText = true;
+
+          if (idx == "35"){
+            $scope.smallerText = true;
+            $scope.smallText = false;
+          }
+          else{
+            $scope.smallText = true;  
+          }
+          
         }      
     });
 

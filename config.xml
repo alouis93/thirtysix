@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.thirtysix229760" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>thirtysix</name>
+<widget id="com.andrewlouis.thirtysix" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>36 to Love</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Thirty-six questions to fall in love (Results may vary).
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="andrew.louis93@gmail.com" href="">
+      Andrew Louis
     </author>
   <content src="index.html"/>
   <access origin="*"/>
-  <preference name="orientation" value="portrait" />
+   <icon src="icon/logo.png" />
+  <preference name="Orientation" value="portrait" />
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>

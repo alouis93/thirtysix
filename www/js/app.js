@@ -65,6 +65,7 @@ var questions = [ {'q': "Given the choice of anyone in the world, whom would you
       StatusBar.styleDefault();
     }
     $("body").addClass(localStorage.getItem("_36theme"));
+      screen.lockOrientation('portrait');
   });
 })
 

@@ -142,11 +142,14 @@
 	line-height: 6vh !important;	
 }
 
-.side-icon{
-	color: crimson;
-
+.smallerText{
+	font-size:5.5vh !important;
+	line-height: 5.5vh !important;	
 }
 
+.side-icon{
+	color: crimson;
+}
 
 .bar-footer{
 	height:17vh;
